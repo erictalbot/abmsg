@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">
+                    <img src="~/Images/st-georges.jpg" /><br />
+                </p>
+            </div>
+            <div class="float-right">
+                <nav>
+                    <ul id="menu">
+                        <li>@Html.ActionLink("Nouvelles", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Responsables", "Responsables", "Home")</li>
+                        <li>Équipes</li>
+                        <li>@Html.ActionLink("Rally cap", "rallycap", "Home")</li>
+                        <li>Contactez-nous</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <br />
+    <br />
+
+    <!-- Start WOWSlider.com BODY section -->
+    <div id="wowslider-container1">
+        <div class="ws_images">
+            <ul>
+                <li>
+                    <img src="/data1/images/baseball_glove.jpg" alt="Association du Baseball Mineur de St-Georges" title="Association du Baseball Mineur de St-Georges" id="wows1_0" />Nous offrons aux jeunes une occasion de...</li>
+                <li>
+                    <img src="/data1/images/1.jpg" alt="" title="" id="wows1_1" />développer leurs talents,</li>
+                <li>
+                    <img src="/data1/images/3.jpg" alt="" title="" id="wows1_2" />développer leurs esprits sportifs,</li>
+                <li>
+                    <img src="/data1/images/2.jpg" alt="" title="" id="wows1_3" />de se dépasser.</li>
+            </ul>
+        </div>
+        <div class="ws_bullets">
+            <div>
+                <a href="#" title="Association du Baseball Mineur de St-Georges">
+                    <img src="/data1/tooltips/baseball_glove.jpg" alt="Association du Baseball Mineur de St-Georges" />1</a>
+                <a href="#" title="">
+                    <img src="/data1/tooltips/1.jpg" alt="" />2</a>
+                <a href="#" title="">
+                    <img src="/data1/tooltips/3.jpg" alt="" />3</a>
+                <a href="#" title="">
+                    <img src="/data1/tooltips/2.jpg" alt="" />4</a>
+            </div>
+        </div>
+        <span class="wsl"><a href="http://wowslider.com">Javascript Image Slideshow</a> by WOWSlider.com v4.7</span>
+        <div class="ws_shadow"></div>
+    </div>
+    <script type="text/javascript" src="/engine1/wowslider.js"></script>
+    <script type="text/javascript" src="/engine1/script.js"></script>
+    <!-- End WOWSlider.com BODY section -->
+
+    <div id="body">
+        @*     @RenderSection("featured", required: false)*@
+        <section class="content-wrapper main-content clear-fix">
+
+            <table border="0">
+                <tr>
+                    <td>
+                        <a href="http://www.desjardins.com/fr/votre_caisse/accueil.jsp?transit=81520157">
+                            <img src="~/Images/Commanditaire/DesjardinsLogo.jpg" />
+                        </a>
+                        <br />
+                        <br />
+                        <img src="~/Images/Commanditaire/Canac.gif" />
+                        <br />
+                        <br />
+                        <br />
+                        <img src="~/Images/Commanditaire/pomerleau.jpg" width="221"/>
+                    </td>
+                    <td>
+                        @RenderBody()
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+
+    <footer>
+        <div class="content-wrapper">
+            <p>&copy; @DateTime.Now.Year - Association de baseball mineur de St-Georges.</p>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/wowslider")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

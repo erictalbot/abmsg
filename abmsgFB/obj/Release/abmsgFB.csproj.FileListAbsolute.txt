@@ -1,0 +1,5 @@
+C:\PROG\DAC\Abmsg\abmsgFB\bin\Release\abmsgFB.dll
+C:\PROG\DAC\Abmsg\abmsgFB\bin\Release\abmsgFB.pdb
+C:\PROG\DAC\Abmsg\abmsgFB\obj\Release\abmsgFB.csprojResolveAssemblyReference.cache
+C:\PROG\DAC\Abmsg\abmsgFB\obj\Release\abmsgFB.dll
+C:\PROG\DAC\Abmsg\abmsgFB\obj\Release\abmsgFB.pdb

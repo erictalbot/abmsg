@@ -1,0 +1,5 @@
+﻿#list2 { width: auto; }
+#list2 ul { font-style:italic; font-family:'Segoe UI Symbol'; font-size:24px; color:black;  }
+#list2 ul li { }
+#list2 ul li p { padding:8px; font-style:normal; font-family:'Segoe UI Symbol'; font-size:13px; color:black; border-left: 1px solid #999; }
+#list2 ul li p em { font-size:larger; font-weight:bold; font-family:'Segoe UI Symbol'; display:block; }

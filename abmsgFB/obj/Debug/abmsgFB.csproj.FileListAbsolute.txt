@@ -1,0 +1,7 @@
+C:\PROG\DAC\Abmsg\abmsgFB\bin\Debug\abmsgFB.dll
+C:\PROG\DAC\Abmsg\abmsgFB\bin\Debug\abmsgFB.pdb
+C:\PROG\DAC\Abmsg\abmsgFB\obj\Debug\abmsgFB.csprojResolveAssemblyReference.cache
+C:\PROG\DAC\Abmsg\abmsgFB\obj\Debug\abmsgFB.dll
+C:\PROG\DAC\Abmsg\abmsgFB\obj\Debug\abmsgFB.pdb
+C:\PROG\DAC\Abmsg\abmsgFB\bin\Debug\Facebook.dll
+C:\PROG\DAC\Abmsg\abmsgFB\bin\Debug\Facebook.xml
