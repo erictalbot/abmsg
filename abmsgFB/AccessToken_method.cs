@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace abmsgFB
 {
-    public class AccessToken
+    public class AccessToken_method
     {
 
         public string GetAccessTokenFromCode(string AppID, string AppSecret)
