@@ -1,24 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+using Abmsg.dto;
+using Abmsg.Logic;
 
 namespace Abmsg.Controllers
 {
-    public class NewsController : Controller
+    public class NewsController : ApiController
     {
-        //
-        // GET: /News/
-
-        public ActionResult Index()
+        public HttpResponseMessage Post(ANews aNews)
         {
-            return View();
-        }
-
-        public ActionResult Indexa()
-        {
-            return View();
+            new NewsManager(aNews);
+            return Request.CreateResponse(HttpStatusCode.OK);
         }
 
     }

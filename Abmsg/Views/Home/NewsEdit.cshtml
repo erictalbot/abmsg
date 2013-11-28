@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutNews.cshtml";
+}
+
+
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '762695377090736', // App ID
+            status: true, // check login status
+            cookie: true, // enable cookies to allow the server to access the session
+            xfbml: true  // parse XFBML
+        });
+
+        FB.Event.subscribe('auth.authResponseChange', function (response) {
+            if (response.status === 'connected') {
+                // the user is logged in and has authenticated your
+                // app, and response.authResponse supplies
+                // the user's ID, a valid access token, a signed
+                // request, and the time the access token 
+                // and signed request each expire
+                var uid = response.authResponse.userID;
+                var accessToken = response.authResponse.accessToken;
+                var accessTokenJson = {
+                    'value' : accessToken
+                }
+
+                $.ajax({
+                    url: "/api/facebook",
+                    type: "post",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    data: JSON.stringify(accessTokenJson),
+                });
+            } else if (response.status === 'not_authorized') {
+                // the user is logged in to Facebook, 
+                // but has not authenticated your app
+            } else {
+                // the user isn't logged in to Facebook.
+            }
+        });
+    };
+
+    // Load the SDK Asynchronously
+    (function (d) {
+        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement('script'); js.id = id; js.async = true;
+        js.src = "//connect.facebook.net/en_US/all.js";
+        ref.parentNode.insertBefore(js, ref);
+    }(document));
+
+    $(document).ready(function () {
+        $('#wait').hide();
+    });
+
+    $(function () {
+        $("input[type=submit], a, button")
+        .button()
+        .click(function (event) {
+            $.ajax({
+                type: 'POST',
+                beforeSend: function () {
+                    $('#wait').show();
+                    $('#submit').hide();
+                },
+                url: '/api/news',
+                cache: false,
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({ title:  $('#newsTitle').val(),content: $('#newsContent').val() }),
+                success: function (data) {
+                    $('#wait').hide();
+                    $('#submit').show();
+                }
+            });
+        });
+    });
+
+</script>
+
+<h2>Ajouter/modifier une nouvelle</h2>
+<br />
+<div class="fb-login-button" data-show-faces="true" data-width="400" data-max-rows="1"></div>
+<br />
+<br />
+<div id="NewsTitle">
+    <input type="text" name="newsTitle" id="newsTitle"><br />
+</div>
+<div id="NewsContent">
+    <textarea name="newsContent" cols="40" rows="6" id="newsContent">
+    Mettre le texte de la nouvelles si en édition.
+</textarea>
+    <br />
+    <button id="submit">Soumettre</button><img src="~/Images/ajax-loader.gif" id="wait" />
+</div>

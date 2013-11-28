@@ -62,48 +62,13 @@ namespace Abmsg.Controllers
         //    return tokens;
         //}
 
-
-
-
-
-
-
-
-
-
-
-
         public ActionResult Index()
         {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             //AbmsgDbContext ctx = new AbmsgDbContext();
             //ANew aSimpleNews = new ANew() { Text = "This is the textt of the news", Title="This is the title of the news" };
             //ctx.News.Add(aSimpleNews);
             //ctx.SaveChanges();
-
-
-            abmsgFB.AccessToken at = new AccessToken();
-            string accessToken = at.GetAccessTokenFromCode("762695377090736", "84d642357858c31f7b41b7802fa784dc");
-
-            string tt = at.GetStatus("CAACEdEose0cBAFUlr6ZB0SVZBTHuI9Cx0xizgdqc6Dga5zxDzEMGm9ZC1g1oQp9KyfEjl5pHJKaO9TqvGUH1vVC1amofln9Q4HSADXxD1TRXjCEt3G3W0mwz1pOuFIf963xGZBukKvIKwdqRQjhlokvufwayE4IG8mmCdSYefktBD59OdQajS8uF7cgXKdZA77pIjd8acZAAZDZD");
-
             return View();
-
         }
 
         public ActionResult Responsables()
@@ -112,6 +77,11 @@ namespace Abmsg.Controllers
         }
 
         public ActionResult RallyCap()
+        {
+            return View();
+        }
+
+        public ActionResult NewsEdit()
         {
             return View();
         }

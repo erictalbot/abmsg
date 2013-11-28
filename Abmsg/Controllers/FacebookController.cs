@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using abmsgFB.dto;
+using Abmsg.Logic;
 
 namespace Abmsg.Controllers
 {
@@ -12,18 +13,8 @@ namespace Abmsg.Controllers
     {
         public HttpResponseMessage Post(AccessToken accessToken)
         {
-            string actk = accessToken.value;
-
+            FacebookManager.Instance.AccessToken = accessToken.value;
             return Request.CreateResponse(HttpStatusCode.OK);
-
         }
-
-
-        public IEnumerable<string> Get()
-        {
-            return new List<string>();
-
-        }
-
     }
 }

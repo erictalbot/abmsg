@@ -186,12 +186,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FacebookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="dto\aNew.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logic\FacebookManager.cs" />
+    <Compile Include="Logic\NewsManager.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -280,6 +284,7 @@
     <None Include="Properties\PublishProfiles\CanamIntranet - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\zip.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Images\ajax-loader.gif" />
     <Content Include="Images\Commanditaire\Canac.gif" />
     <Content Include="Images\Commanditaire\DesjardinsLogo.jpg" />
     <Content Include="Images\Commanditaire\pomerleau.jpg" />
@@ -340,7 +345,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\Responsables.cshtml" />
     <Content Include="Views\Home\RallyCap.cshtml" />
-    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Home\NewsEdit.cshtml" />
     <Content Include="Views\Shared\_LayoutNews.cshtml" />
     <None Include="Web.azure.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -349,6 +354,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\News\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -388,7 +394,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>57750</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:3999/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

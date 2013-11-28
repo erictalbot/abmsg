@@ -5,6 +5,5 @@ C:\PROG\DAC\Abmsg\AbmsgModel\bin\Debug\EntityFramework.dll
 C:\PROG\DAC\Abmsg\AbmsgModel\bin\Debug\EntityFramework.SqlServer.dll
 C:\PROG\DAC\Abmsg\AbmsgModel\bin\Debug\EntityFramework.xml
 C:\PROG\DAC\Abmsg\AbmsgModel\bin\Debug\EntityFramework.SqlServer.xml
-C:\PROG\DAC\Abmsg\AbmsgModel\obj\Debug\AbmsgModel.csprojResolveAssemblyReference.cache
 C:\PROG\DAC\Abmsg\AbmsgModel\obj\Debug\AbmsgModel.dll
 C:\PROG\DAC\Abmsg\AbmsgModel\obj\Debug\AbmsgModel.pdb

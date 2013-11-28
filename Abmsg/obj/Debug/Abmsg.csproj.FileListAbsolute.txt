@@ -89,3 +89,5 @@ C:\PROG\DAC\Abmsg\Abmsg\bin\AbmsgModel.pdb
 C:\PROG\DAC\Abmsg\Abmsg\bin\EntityFramework.SqlServer.xml
 C:\PROG\DAC\Abmsg\Abmsg\bin\abmsgFB.dll
 C:\PROG\DAC\Abmsg\Abmsg\bin\abmsgFB.pdb
+C:\PROG\DAC\Abmsg\Abmsg\bin\Facebook.dll
+C:\PROG\DAC\Abmsg\Abmsg\bin\Facebook.xml

@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
 </head>
 <body>
     <header>
@@ -33,9 +35,9 @@
     <br />
 
     <div id="body">
-         <section class="content-wrapper main-content clear-fix">
-        @RenderBody()
-             </section>
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
     </div>
 
     <footer>
@@ -43,8 +45,6 @@
             <p>&copy; @DateTime.Now.Year - Association de baseball mineur de St-Georges.</p>
         </div>
     </footer>
-    @Scripts.Render("~/bundles/jquery")
-
     @RenderSection("scripts", required: false)
 </body>
 </html>
