@@ -59,7 +59,6 @@ namespace Abmsg.Controllers
 
         //
         // GET: /Account/Register
-
         [AllowAnonymous]
         public ActionResult Register()
         {

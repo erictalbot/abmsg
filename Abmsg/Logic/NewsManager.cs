@@ -38,7 +38,7 @@ namespace Abmsg.Logic
         private void PostToFacebook()
         {
             FacebookMethods am = new FacebookMethods(_accessToken);
-            am.post();
+            //am.post();
         }
 
         #endregion 
