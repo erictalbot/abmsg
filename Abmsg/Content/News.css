@@ -3,3 +3,29 @@
 #list2 ul li { }
 #list2 ul li p { padding:8px; font-style:normal; font-family:'Segoe UI Symbol'; font-size:13px; color:black; border-left: 1px solid #999; }
 #list2 ul li p em { font-size:larger; font-weight:bold; font-family:'Segoe UI Symbol'; display:block; }
+
+
+
+
+#content2 .blocks li{
+    transition-delay: 0s;
+    transition-duration: 200ms;
+    transition-property: border-bottom-color, background-color, color, bottom, opacity, border-radius, box-shadow, width;
+    transition-timing-function: ease-in-out;
+}
+#content2 .blocks li {
+    background-color: #EEEEEE;
+    border-bottom: 3px solid #CCCCCC;
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 10px 10px 0;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 175px;
+}
+#content2 .blocks li:hover, #content .blocks li.checked {
+    background-color: #8BCF01;
+    border-bottom-color: #62B000;
+}
