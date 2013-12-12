@@ -5,15 +5,11 @@
 #list2 ul li p em { font-size:larger; font-weight:bold; font-family:'Segoe UI Symbol'; display:block; }
 
 
-
-
-#content2 .blocks li{
-    transition-delay: 0s;
-    transition-duration: 200ms;
-    transition-property: border-bottom-color, background-color, color, bottom, opacity, border-radius, box-shadow, width;
-    transition-timing-function: ease-in-out;
+.blocks {
+    margin: 0;
+    padding: 0;
 }
-#content2 .blocks li {
+.blocks li {
     background-color: #EEEEEE;
     border-bottom: 3px solid #CCCCCC;
     display: inline-block;
@@ -25,7 +21,38 @@
     vertical-align: middle;
     width: 175px;
 }
-#content2 .blocks li:hover, #content .blocks li.checked {
+
+.blocks li span {
+    display: inline-block;
+    line-height: 1.4;
+    padding: 0 10px;
+    vertical-align: middle;
+}
+
+.blocks li:hover{
     background-color: #8BCF01;
     border-bottom-color: #62B000;
+    color: #265F01;
 }
+
+li a.source {
+    background-color: #CCCCCC;
+    bottom: -19px;
+    color: #2B4001 !important;
+    font-size: 85%;
+    left: 0;
+    line-height: 19px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    transition: all 0.2s ease;
+}
+li:hover a.source {
+    background-color: #62B000;
+    bottom: 0;
+}
+
+
+
+
+
