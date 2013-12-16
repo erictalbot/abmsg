@@ -1,9 +1,0 @@
-C:\PROG\DAC\Abmsg\AbmsgModel\bin\Release\AbmsgModel.dll.config
-C:\PROG\DAC\Abmsg\AbmsgModel\bin\Release\AbmsgModel.dll
-C:\PROG\DAC\Abmsg\AbmsgModel\bin\Release\AbmsgModel.pdb
-C:\PROG\DAC\Abmsg\AbmsgModel\bin\Release\EntityFramework.dll
-C:\PROG\DAC\Abmsg\AbmsgModel\bin\Release\EntityFramework.SqlServer.dll
-C:\PROG\DAC\Abmsg\AbmsgModel\bin\Release\EntityFramework.xml
-C:\PROG\DAC\Abmsg\AbmsgModel\bin\Release\EntityFramework.SqlServer.xml
-C:\PROG\DAC\Abmsg\AbmsgModel\obj\Release\AbmsgModel.dll
-C:\PROG\DAC\Abmsg\AbmsgModel\obj\Release\AbmsgModel.pdb
