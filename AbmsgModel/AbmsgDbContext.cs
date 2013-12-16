@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using AbmsgModel.Data;
+using AbmsgModel.Migrations;
 
 
 namespace AbmsgModel
@@ -23,7 +24,7 @@ namespace AbmsgModel
         public AbmsgDbContext()
             : base(nameOrConnectionString: "AbmsgNewsEntities")
         {
-            Database.SetInitializer<AbmsgDbContext>(new CreateDatabaseIfNotExists<AbmsgDbContext>());
+            Database.SetInitializer<AbmsgDbContext>(new MigrateDatabaseToLatestVersion<AbmsgDbContext,Configuration>());
         }
 
         #endregion

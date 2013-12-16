@@ -13,10 +13,14 @@ namespace AbmsgModel.Data
         {
             Title = title;
             Text = text;
+            Date = DateTime.Now;
+            FileUnc = string.Empty;
         }
 
         public int Id { get; set; }
         public string Title { get; set; }
         public string Text { get; set; }
+        public DateTime Date { get; set; }
+        public string FileUnc { get; set; }
     }
 }
