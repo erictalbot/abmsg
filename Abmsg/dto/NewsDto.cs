@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Abmsg.dto
 {
-    public class ANews
+    public class NewsDto
     {
         public string Title { get; set; }
         public string Content { get; set; }

@@ -5,6 +5,12 @@
     <title>@ViewBag.Title</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
+
+
+
+    <link type="text/css" rel="stylesheet" href="/Content/qtip2/jquery.qtip.css" />
+
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -23,7 +29,6 @@
                         <li>@Html.ActionLink("Responsables", "Responsables", "Home")</li>
                         <li>Équipes</li>
                         <li>@Html.ActionLink("Rally cap", "rallycap", "Home")</li>
-                        <li>Contactez-nous</li>
                     </ul>
                 </nav>
             </div>
@@ -66,9 +71,7 @@
     <!-- End WOWSlider.com BODY section -->
 
     <div id="body">
-        @*     @RenderSection("featured", required: false)*@
         <section class="content-wrapper main-content clear-fix">
-
             <table border="0">
                 <tr>
                     <td>
@@ -77,11 +80,17 @@
                         </a>
                         <br />
                         <br />
-                        <img src="~/Images/Commanditaire/Canac.gif" />
                         <br />
                         <br />
+                        <br />                        
                         <br />
-                        <img src="~/Images/Commanditaire/pomerleau.jpg" width="221"/>
+
+                        <ul class="blocks">
+                            <li>
+                                <span>Affichez-vous ici !</span>
+                                <a class="source" target="_blank" href="mailto:talbot.eric@gmail.com">Contactez nous</a>
+                            </li>
+                        </ul>
                     </td>
                     <td>
                         @RenderBody()

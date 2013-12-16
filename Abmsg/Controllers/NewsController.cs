@@ -6,16 +6,30 @@ using System.Net.Http;
 using System.Web.Http;
 using Abmsg.dto;
 using Abmsg.Logic;
+using AbmsgModel;
 
 namespace Abmsg.Controllers
 {
-    public class NewsController : ApiController
+    public class NewsController : ApiControllerBase
     {
-        public HttpResponseMessage Post(ANews aNews)
+
+        public NewsController(IUow uow)
         {
+            Uow = uow;
+        }
+
+        public HttpResponseMessage Post(NewsDto aNews)
+        {
+            Uow.News.Add(new AbmsgModel.Data.News(aNews.Title, aNews.Content));
+            Uow.Commit();
             new NewsManager(aNews);
             return Request.CreateResponse(HttpStatusCode.OK);
         }
+
+
+        // Edit 
+
+        // Delete
 
     }
 }

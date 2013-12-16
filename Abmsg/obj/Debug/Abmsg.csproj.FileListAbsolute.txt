@@ -91,3 +91,9 @@ C:\PROG\DAC\Abmsg\Abmsg\bin\abmsgFB.dll
 C:\PROG\DAC\Abmsg\Abmsg\bin\abmsgFB.pdb
 C:\PROG\DAC\Abmsg\Abmsg\bin\Facebook.dll
 C:\PROG\DAC\Abmsg\Abmsg\bin\Facebook.xml
+C:\PROG\DAC\Abmsg\Abmsg\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\PROG\DAC\Abmsg\Abmsg\bin\Microsoft.Practices.Unity.dll
+C:\PROG\DAC\Abmsg\Abmsg\bin\Unity.Mvc4.dll
+C:\PROG\DAC\Abmsg\Abmsg\bin\Unity.WebApi.dll
+C:\PROG\DAC\Abmsg\Abmsg\bin\Microsoft.Practices.Unity.xml
+C:\PROG\DAC\Abmsg\Abmsg\bin\Microsoft.Practices.Unity.Configuration.xml

@@ -18,11 +18,10 @@ namespace Abmsg.Logic
 
         #region ctor
 
-        public NewsManager(ANews aNews)
+        public NewsManager(NewsDto aNews)
         {
             _accessToken = GetAccessToken();
             PostToFacebook();
-
         }
 
         #endregion 

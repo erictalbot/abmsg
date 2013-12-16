@@ -14,7 +14,7 @@ namespace AbmsgModel
 
         #region properties
 
-        public DbSet<ANew> News { get; set; }
+        public DbSet<News> News { get; set; }
 
         #endregion
 
@@ -28,6 +28,14 @@ namespace AbmsgModel
 
         #endregion
 
+        #region public methods 
+
+        public virtual int Commit()
+        {
+            return SaveChanges();
+        }
+
+        #endregion 
 
     }
 }

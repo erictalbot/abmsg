@@ -47,8 +47,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbmsgDbContext.cs" />
-    <Compile Include="Data\ANew.cs" />
+    <Compile Include="Data\News.cs" />
+    <Compile Include="IUow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\DefaultRepository.cs" />
+    <Compile Include="Repositories\INewsRepository.cs" />
+    <Compile Include="Repositories\IRepositoryProvider.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\NewsRepository.cs" />
+    <Compile Include="Repositories\RepositoryFactories.cs" />
+    <Compile Include="Repositories\RepositoryProvider.cs" />
+    <Compile Include="Uow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
