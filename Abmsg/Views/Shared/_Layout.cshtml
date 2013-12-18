@@ -5,14 +5,12 @@
     <title>@ViewBag.Title</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
-
-
-
-    <link type="text/css" rel="stylesheet" href="/Content/qtip2/jquery.qtip.css" />
-
-
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/jquery")
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/wowslider")
+    @RenderSection("scripts", required: false)
 </head>
 <body>
     <header>
@@ -82,7 +80,7 @@
                         <br />
                         <br />
                         <br />
-                        <br />                        
+                        <br />
                         <br />
 
                         <ul class="blocks">
@@ -105,8 +103,7 @@
             <p>&copy; @DateTime.Now.Year - Association de baseball mineur de St-Georges.</p>
         </div>
     </footer>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/wowslider")
-    @RenderSection("scripts", required: false)
+
+
 </body>
 </html>

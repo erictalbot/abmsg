@@ -9,6 +9,10 @@ namespace AbmsgModel.Data
 {
     public class News
     {
+        public News()
+        {
+        }
+
         public News(string title, string text)
         {
             Title = title;

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
-using System.Web.Http;
-using Abmsg.dto;
 using Abmsg.Logic;
 using AbmsgModel;
+using AbmsgModel.Data;
+using Abmsg.dto;
 
 namespace Abmsg.Controllers
 {
@@ -24,6 +22,12 @@ namespace Abmsg.Controllers
             Uow.Commit();
             new NewsManager(aNews);
             return Request.CreateResponse(HttpStatusCode.OK);
+        }
+
+        // GET api/news
+        public IEnumerable<News> Get()
+        {           
+          return  Uow.News.GetAll();
         }
 
 

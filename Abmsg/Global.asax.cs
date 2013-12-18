@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Abmsg.App_Start;
 
 namespace Abmsg
 {
@@ -26,6 +27,7 @@ namespace Abmsg
 
             Bootstrapper.Initialise();
 
+            GlobalConfig.CustomizeConfig(GlobalConfiguration.Configuration);    // Format to JSON camelCase instead or PascalCase
             
         }
     }

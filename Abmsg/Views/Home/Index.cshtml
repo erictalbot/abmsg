@@ -11,9 +11,50 @@
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="float-center">
+<script>
+    function newsItem(title, text, id) {
+        return {
+            Title: ko.observable(title),
+            Text: ko.observable(text),
+            SimpleTaskId: ko.observable(id)
+        };
+    }
 
-        <div id ="list2">
+    $(function () {
+        var dataArray = [];
+        $.getJSON("api/News/",
+        function (news) {
+            for (var i = 0; i < news.length; i++) {
+                dataArray.push(new newsItem(news[i].title, news[i].text, news[i].id));
+            }
+        });
+    });
+</script>
+
+
+<div class="float-center">
+    <div id="list2" class="simpleTaskList">
+    <ul data-bind="foreach: news">
+        <li class="taskItem" data-bind="click: $parent.selectTask">
+            <div class="divTitle">
+                <span data-bind="text: Title"></span>
+            </div>
+            <div class="divContent">
+                <span data-bind="text: Text"></span>
+            </div>
+@*            <div>
+                <a href="#" class="ItemDelete">delete</a>
+                <a href="#" class="ItemEdit">edit</a>
+            </div>*@
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+      @*  <div id ="list2">
      	<ul>
 			<li>
                 <p>
@@ -48,5 +89,5 @@
                 <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="true"></div>
 			</li>
 		</ul>
-    </div>
+    </div>*@
 </div>

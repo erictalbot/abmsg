@@ -24,7 +24,7 @@ namespace AbmsgModel
         public AbmsgDbContext()
             : base(nameOrConnectionString: "AbmsgNewsEntities")
         {
-            Database.SetInitializer<AbmsgDbContext>(new MigrateDatabaseToLatestVersion<AbmsgDbContext,Configuration>());
+            Database.SetInitializer<AbmsgDbContext>(new MigrateDatabaseToLatestVersion<AbmsgDbContext, Configuration>());
         }
 
         #endregion
