@@ -14,6 +14,7 @@ namespace Abmsg.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.baseUrl = "http://www.abmsg.ca/api/news/";
             return View();
         }
 

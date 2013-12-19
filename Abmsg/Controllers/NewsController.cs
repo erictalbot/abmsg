@@ -5,6 +5,7 @@ using Abmsg.Logic;
 using AbmsgModel;
 using AbmsgModel.Data;
 using Abmsg.dto;
+using System.Linq;
 
 namespace Abmsg.Controllers
 {
@@ -26,10 +27,14 @@ namespace Abmsg.Controllers
 
         // GET api/news
         public IEnumerable<News> Get()
-        {           
-          return  Uow.News.GetAll();
+        {
+            return Uow.News.GetAll().OrderByDescending(n => n.Date).Take(4);
         }
 
+        public News Get(int id)
+        {
+            return Uow.News.GetById(id);
+        }
 
         // Edit 
 

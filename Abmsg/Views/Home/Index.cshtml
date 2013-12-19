@@ -16,7 +16,7 @@
         return {
             Title: ko.observable(title),
             Text: ko.observable(text),
-            SimpleTaskId: ko.observable(id)
+            NewsId: ko.observable(id)
         };
     }
 
@@ -27,34 +27,60 @@
             for (var i = 0; i < news.length; i++) {
                 dataArray.push(new newsItem(news[i].title, news[i].text, news[i].id));
             }
+            viewModel = {
+                news: ko.observableArray(dataArray)
+
+            };
+            ko.applyBindings(viewModel);
         });
     });
+
+    $(document).on("click", ".ItemDelete", function () {
+        var itemToRemove = ko.dataFor(this);
+        alert(itemToRemove.NewsId());
+    });
+
+    ko.bindingHandlers.likeButton = {
+        update: function (element, valueAccessor) {
+            $(element).attr('data-href', "http://www.abmsg.ca/news/");
+            //FB.XFBML.parse();
+        }
+    }
+
 </script>
+
 
 
 <div class="float-center">
     <div id="list2" class="simpleTaskList">
-    <ul data-bind="foreach: news">
-        <li class="taskItem" data-bind="click: $parent.selectTask">
-            <div class="divTitle">
-                <span data-bind="text: Title"></span>
-            </div>
-            <div class="divContent">
-                <span data-bind="text: Text"></span>
-            </div>
-@*            <div>
-                <a href="#" class="ItemDelete">delete</a>
-                <a href="#" class="ItemEdit">edit</a>
-            </div>*@
-        </li>
-    </ul>
-</div>
+        <ul data-bind="foreach: news">
+            <li>
+                <p>
+                    <em><span data-bind="text: Title"></span></em>
+                    <span data-bind="text: Text"></span>
+                    <span data-bind="text: NewsId"></span>
+                </p>
+                <div>
+
+                    <div class="fb-like" 
+                        data-href="http://www.abmsg.ca/" 
+                        data-width="The pixel width of the plugin" 
+                        data-height="The pixel height of the plugin" 
+                        data-colorscheme="light" 
+                        data-layout="button_count" 
+                        data-action="like" 
+                        data-show-faces="false" 
+                        data-send="true"
+                        data-bind="likeButton: myUrl">
+                    </div>
+                    <a href="#" class="ItemDelete">delete</a>
+                </div>
+            </li>
+        </ul>
+    </div>
 
 
-
-
-
-      @*  <div id ="list2">
+@*  <div id ="list2">
      	<ul>
 			<li>
                 <p>
