@@ -2,14 +2,7 @@
     ViewBag.Title = "Association de baseball mineur de St-Georges";
 }
 
-<div id="fb-root"></div>
-<script>(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<script src="//connect.facebook.net/en_US/all.js"></script>
 
 <script>
     function newsItem(title, text, id) {
@@ -40,16 +33,19 @@
         alert(itemToRemove.NewsId());
     });
 
+    function newsUrl() {
+        var news = ko.dataFor(this);
+        return "http://www.abmsg.ca/news/" + news.NewsId();
+    }
+
     ko.bindingHandlers.likeButton = {
         update: function (element, valueAccessor) {
-            $(element).attr('data-href', "http://www.abmsg.ca/news/");
-            //FB.XFBML.parse();
+            $(element).attr('data-href', valueAccessor());
+            FB.XFBML.parse();
         }
     }
 
 </script>
-
-
 
 <div class="float-center">
     <div id="list2" class="simpleTaskList">
@@ -62,8 +58,7 @@
                 </p>
                 <div>
 
-                    <div class="fb-like" 
-                        data-href="http://www.abmsg.ca/" 
+                    <div class="fb-like
                         data-width="The pixel width of the plugin" 
                         data-height="The pixel height of the plugin" 
                         data-colorscheme="light" 
@@ -71,7 +66,7 @@
                         data-action="like" 
                         data-show-faces="false" 
                         data-send="true"
-                        data-bind="likeButton: myUrl">
+                        data-bind="likeButton: newsUrl ">
                     </div>
                     <a href="#" class="ItemDelete">delete</a>
                 </div>
