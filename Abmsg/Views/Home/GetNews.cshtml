@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "GetNews";
+}
+@{@model Abmsg.Models.Views.HomeViewModel   
+    <div id="list2">
+        <ul>
+            <li>
+                <p>
+                    @Html.Label(Model.Title)
+                    <em>
+                        @Html.Label(Model.Text)
+                    </em>
+                </p>
+            </li>
+        </ul>
+    </div>
+}

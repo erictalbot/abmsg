@@ -218,6 +218,7 @@
     <Compile Include="Logic\NewsManager.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Dto\NewsDto.cs" />
+    <Compile Include="Models\Views\HomeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -368,6 +369,7 @@
     <Content Include="Views\Home\RallyCap.cshtml" />
     <Content Include="Views\Home\NewsEdit.cshtml" />
     <Content Include="Views\Shared\_LayoutNews.cshtml" />
+    <Content Include="Views\Home\GetNews.cshtml" />
     <None Include="Web.azure.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>
