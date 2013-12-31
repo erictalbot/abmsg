@@ -23,6 +23,7 @@ namespace Abmsg.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.IsAuthenticated = HttpContext.User.Identity.IsAuthenticated;
             ViewBag.baseUrl = "http://www.abmsg.ca/api/news/";
             return View();
         }
@@ -38,7 +39,7 @@ namespace Abmsg.Controllers
         }
 
         [Authorize]
-        public ActionResult NewsEdit()
+        public ActionResult NewsAdd()
         {
             return View();
         }
@@ -49,5 +50,13 @@ namespace Abmsg.Controllers
             HomeViewModel model = new HomeViewModel(Uow.News.GetById(id));
             return View(model);
         }
+
+        [Authorize]
+        public ActionResult NewsEdit(int id)
+        {
+            HomeViewModel model = new HomeViewModel(Uow.News.GetById(id));
+            return View(model);
+        }
+
     }
 }

@@ -38,7 +38,16 @@ namespace Abmsg.Controllers
 
         // Edit 
 
-        // Delete
-
+        // DELETE api/task/id where id is a int
+        public HttpResponseMessage Delete(int id)
+        {
+            if (Uow.News.Delete(id))
+            {
+                Uow.Commit();
+                return Request.CreateResponse(HttpStatusCode.OK);
+            }
+            else
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+        }
     }
 }

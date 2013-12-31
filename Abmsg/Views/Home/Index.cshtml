@@ -13,7 +13,7 @@
         };
     }
 
-    $(function () {
+    $(function getNews() {
         var dataArray = [];
         $.getJSON("api/News/",
         function (news) {
@@ -28,9 +28,26 @@
         });
     });
 
+
+    $(function () {
+        getNews();
+    });
+
     $(document).on("click", ".ItemDelete", function () {
         var itemToRemove = ko.dataFor(this);
-        alert(itemToRemove.NewsId());
+        $.ajax({
+            url: "/api/News?id=" + itemToRemove.NewsId(),
+            type: "DELETE",
+            success: function () {
+                viewModel.news.remove(itemToRemove);
+            }
+        });
+    });
+
+
+    $(document).on("click", ".ItemEdit", function () {
+        var selectedItem = ko.dataFor(this);
+        open('/home/newsedit/'+selectedItem.NewsId());       
     });
 
     function newsUrl() {
@@ -44,7 +61,6 @@
             FB.XFBML.parse();
         }
     }
-
 </script>
 
 <div class="float-center">
@@ -57,18 +73,21 @@
                     <span data-bind="text: NewsId"></span>
                 </p>
                 <div>
-
-                    <div class="fb-like
-                        data-width="The pixel width of the plugin" 
-                        data-height="The pixel height of the plugin" 
-                        data-colorscheme="light" 
-                        data-layout="button_count" 
-                        data-action="like" 
-                        data-show-faces="false" 
+                    <div class="fb-like"
+                        data-width="The pixel width of the plugin"
+                        data-height="The pixel height of the plugin"
+                        data-colorscheme="light"
+                        data-layout="button_count"
+                        data-action="like"
+                        data-show-faces="false"
                         data-send="true"
                         data-bind="likeButton: newsUrl ">
                     </div>
-                    <a href="#" class="ItemDelete">delete</a>
+                    @if (ViewBag.IsAuthenticated)
+                    {
+                        <a href="#" class="ItemDelete">delete</a>
+                        <a href="#" class="ItemEdit">edit</a>   
+                    }
                 </div>
             </li>
         </ul>

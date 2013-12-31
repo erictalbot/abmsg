@@ -4,6 +4,25 @@
 #list2 ul li p { padding:8px; font-style:normal; font-family:'Segoe UI Symbol'; font-size:13px; color:black; border-left: 1px solid #999; }
 #list2 ul li p em { font-size:larger; font-weight:bold; font-family:'Segoe UI Symbol'; display:block; }
 
+a.ItemDelete
+{
+    font-size: 12px;
+    text-decoration: none;
+    padding: 0 0 0 14px; 
+    background-repeat: no-repeat;
+    background-image: url(../images/del.gif);
+    margin-left: 1em;
+}
+
+a.ItemEdit
+{
+    font-size: 12px;
+    text-decoration: none;
+    padding: 0 0 0 14px; 
+    background-repeat: no-repeat;
+    background-image: url(../images/edit.gif);
+    margin-left: 1em;
+}
 
 .blocks {
     margin: 0;
