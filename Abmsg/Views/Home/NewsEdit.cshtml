@@ -6,11 +6,7 @@
 
     $(document).ready(function () {
         $('#wait').hide();
-    });
-
-    $(function () {
-        $("input[type=submit], a, button")
-        .button()
+        $('#submit')
         .click(function (event) {
             $.ajax({
                 type: 'POST',
@@ -21,14 +17,20 @@
                 url: '/api/news',
                 cache: false,
                 contentType: 'application/json; charset=utf-8',
-                data: JSON.stringify({ title: $('#newsTitle').val(), content: $('#newsContent').val() }),
+                data: JSON.stringify({ title: $('#Title').val(), content: $('#Text').val(), id: $('#Id').val() }),
                 success: function (data) {
                     $('#wait').hide();
                     $('#submit').show();
+                    open('/', '_self');
                 }
             });
         });
+        $('#cancel')
+        .click(function (event) {
+            open('/', '_self');
+        });
     });
+
 </script>
 
 <h2>Modifier une nouvelle</h2>
@@ -38,9 +40,10 @@
         <ul>
             <li>
                 <p>
-                    @Html.EditorFor(x=>Model.Title)
+                    @Html.HiddenFor(x => Model.Id)
+                    @Html.EditorFor(x => Model.Title)
                     <em>
-                        @Html.TextAreaFor(y=>Model.Text)
+                        @Html.TextAreaFor(y => Model.Text)
                     </em>
                 </p>
             </li>
@@ -50,3 +53,4 @@
 <br />
 <br />
 <button id="submit">Soumettre</button><img src="~/Images/ajax-loader.gif" id="wait" />
+<button id="cancel">Annuler</button>

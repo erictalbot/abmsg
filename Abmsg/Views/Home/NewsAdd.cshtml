@@ -3,10 +3,9 @@
     Layout = "~/Views/Shared/_LayoutNews.cshtml";
 }
 
-
-iv id="fb-root"></div>
+<div id="fb-root"></div>
 <script>
-    window.f<dbAsyncInit = function () {
+    window.fbAsyncInit = function () {
         FB.init({
             appId: '762695377090736', // App ID
             status: true, // check login status
@@ -24,7 +23,7 @@ iv id="fb-root"></div>
                 var uid = response.authResponse.userID;
                 var accessToken = response.authResponse.accessToken;
                 var accessTokenJson = {
-                    'value' : accessToken
+                    'value': accessToken
                 }
 
                 $.ajax({
@@ -54,10 +53,7 @@ iv id="fb-root"></div>
 
     $(document).ready(function () {
         $('#wait').hide();
-    });
-
-    $(function () {
-        $("input[type=submit], a, button")
+        $('#submit')
         .button()
         .click(function (event) {
             $.ajax({
@@ -69,12 +65,16 @@ iv id="fb-root"></div>
                 url: '/api/news',
                 cache: false,
                 contentType: 'application/json; charset=utf-8',
-                data: JSON.stringify({ title:  $('#newsTitle').val(),content: $('#newsContent').val() }),
+                data: JSON.stringify({ title: $('#Title').val(), content: $('#Content').val() }),
                 success: function (data) {
                     $('#wait').hide();
                     $('#submit').show();
                 }
             });
+        });
+        $('#cancel')
+        .click(function (event) {
+            open('/', '_self');
         });
     });
 
@@ -86,11 +86,11 @@ iv id="fb-root"></div>
 <br />
 <br />
 <div id="NewsTitle">
-    <input type="text" name="newsTitle" id="newsTitle"><br />
+    <input type="text" name="Title" id="Title"><br />
 </div>
 <div id="NewsContent">
-    <textarea name="newsContent" cols="40" rows="6" id="newsContent">
-</textarea>
+    <textarea name="Content" cols="40" rows="6" id="Content"></textarea>
     <br />
     <button id="submit">Soumettre</button><img src="~/Images/ajax-loader.gif" id="wait" />
+    <button id="cancel">Annuler</button>
 </div>

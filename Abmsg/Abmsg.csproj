@@ -314,6 +314,8 @@
     <Content Include="Images\fr-default-large.jpg" />
     <Content Include="Images\locked.jpg" />
     <Content Include="Images\rallycap.png" />
+    <Content Include="Images\Responsables\erictalbot.jpg" />
+    <Content Include="Images\Responsables\none.png" />
     <Content Include="Images\st-georges.jpg" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <None Include="Scripts\jquery-1.8.3.intellisense.js" />
@@ -375,6 +377,7 @@
     <Content Include="Views\Shared\_LayoutNews.cshtml" />
     <Content Include="Views\Home\GetNews.cshtml" />
     <Content Include="Views\Home\NewsEdit.cshtml" />
+    <Content Include="Views\Home\Liens.cshtml" />
     <None Include="Web.azure.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>

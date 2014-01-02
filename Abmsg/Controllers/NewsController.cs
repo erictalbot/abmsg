@@ -19,10 +19,8 @@ namespace Abmsg.Controllers
 
         public HttpResponseMessage Post(NewsDto aNews)
         {
-            Uow.News.Add(new AbmsgModel.Data.News(aNews.Title, aNews.Content));
-            Uow.Commit();
-            new NewsManager(aNews);
-            return Request.CreateResponse(HttpStatusCode.OK);
+            NewsManager mgr = new NewsManager(aNews,Uow);
+            return (mgr.Apply() ?  Request.CreateResponse(HttpStatusCode.OK) :  Request.CreateResponse(HttpStatusCode.NotFound));
         }
 
         // GET api/news
@@ -35,8 +33,6 @@ namespace Abmsg.Controllers
         {
             return Uow.News.GetById(id);
         }
-
-        // Edit 
 
         // DELETE api/task/id where id is a int
         public HttpResponseMessage Delete(int id)

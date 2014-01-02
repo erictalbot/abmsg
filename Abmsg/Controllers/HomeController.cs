@@ -38,6 +38,11 @@ namespace Abmsg.Controllers
             return View();
         }
 
+        public ActionResult Liens()
+        {
+            return View();
+        }
+
         [Authorize]
         public ActionResult NewsAdd()
         {

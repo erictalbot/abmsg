@@ -22,7 +22,6 @@
             }
             viewModel = {
                 news: ko.observableArray(dataArray)
-
             };
             ko.applyBindings(viewModel);
         });
@@ -44,10 +43,9 @@
         });
     });
 
-
     $(document).on("click", ".ItemEdit", function () {
         var selectedItem = ko.dataFor(this);
-        open('/home/newsedit/'+selectedItem.NewsId());       
+        open('/home/newsedit/' + selectedItem.NewsId(), '_self');
     });
 
     function newsUrl() {
@@ -61,6 +59,11 @@
             FB.XFBML.parse();
         }
     }
+
+   function addNews() {
+        open('/home/newsadd/', '_self');
+    };
+
 </script>
 
 <div class="float-center">
@@ -70,14 +73,13 @@
                 <p>
                     <em><span data-bind="text: Title"></span></em>
                     <span data-bind="text: Text"></span>
-                    <span data-bind="text: NewsId"></span>
                 </p>
                 <div>
                     <div class="fb-like"
-                        data-width="The pixel width of the plugin"
-                        data-height="The pixel height of the plugin"
+                        data-width="200"
+                        data-height="10"
                         data-colorscheme="light"
-                        data-layout="button_count"
+                        data-layout="button" 
                         data-action="like"
                         data-show-faces="false"
                         data-send="true"
@@ -92,4 +94,9 @@
             </li>
         </ul>
     </div>
+
 </div>
+@if (ViewBag.IsAuthenticated)
+{
+    <input type ="button" id="addNews" value="Ajouter" onClick="javascript: addNews()"  />
+}
