@@ -11,8 +11,10 @@
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/wowslider")
     @RenderSection("scripts", required: false)
+    @RenderSection("facebookMetaTags", required: false)
 </head>
 <body>
+   @RenderSection("facebookScripts", required: false)
     <header>
         <div class="content-wrapper">
             <div class="float-left">
@@ -32,16 +34,15 @@
                         {
                             if (ViewBag.IsAuthenticated)
                             {
-                                <img src="/images/unlocked.jpg" height="20" width="25"/>     
+                            <img src="/images/unlocked.jpg" height="20" width="25" />     
                             }
                             else
                             {
-                                <li><a href="@Url.Action("login", "Account")"><img src="~/Images/locked.jpg" width="10" height="10" />
+                            <li><a href="@Url.Action("login", "Account")">
+                                <img src="~/Images/locked.jpg" width="10" height="10" />
                             </a></li>
                             }
                         }
-
-
                     </ul>
                 </nav>
             </div>

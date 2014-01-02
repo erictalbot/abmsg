@@ -1,14 +1,19 @@
-﻿@{
-    ViewBag.Title = "GetNews";
-}
-@{@model Abmsg.Models.Views.HomeViewModel   
+﻿@{@model Abmsg.Models.Views.HomeViewModel   
+    ViewBag.Title = Model.Title;
+    @section  facebookMetaTags
+    {
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="@Model.Title" />
+        <meta property="og:image" content="http://abmsg.azurewebsites.net/images/st-georges.jpg" />
+        <meta property="og:url" content="http://abmsg.azurewebsites.net/home/getnews/"@Model.Id />
+    }
     <div id="list2">
         <ul>
             <li>
                 <p>
                     @Html.Label(Model.Title)
                     <em>
-                        @Html.Label(Model.Text)
+                       @Model.Text
                     </em>
                 </p>
             </li>

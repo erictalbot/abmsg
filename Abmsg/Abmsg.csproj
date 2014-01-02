@@ -311,7 +311,6 @@
     <Content Include="Images\Commanditaire\pomerleau.jpg" />
     <Content Include="Images\del.gif" />
     <Content Include="Images\edit.gif" />
-    <Content Include="Images\fr-default-large.jpg" />
     <Content Include="Images\locked.jpg" />
     <Content Include="Images\rallycap.png" />
     <Content Include="Images\Responsables\erictalbot.jpg" />

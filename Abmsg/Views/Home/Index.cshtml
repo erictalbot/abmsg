@@ -2,7 +2,22 @@
     ViewBag.Title = "Association de baseball mineur de St-Georges";
 }
 
-<script src="//connect.facebook.net/en_US/all.js"></script>
+@section facebookScripts
+{
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=762695377090736";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+}
+
+
+
+
+@*<script src="//connect.facebook.net/en_US/all.js"></script>*@
 
 <script>
     function newsItem(title, text, id) {
@@ -50,7 +65,7 @@
 
     function newsUrl() {
         var news = ko.dataFor(this);
-        return "http://www.abmsg.ca/home/getnews/" + news.NewsId();
+        return "http://abmsg.azurewebsites.net/home/getnews/" + news.NewsId();
     }
 
     ko.bindingHandlers.likeButton = {
@@ -60,7 +75,7 @@
         }
     }
 
-   function addNews() {
+    function addNews() {
         open('/home/newsadd/', '_self');
     };
 
@@ -74,29 +89,23 @@
                     <em><span data-bind="text: Title"></span></em>
                     <span data-bind="text: Text"></span>
                 </p>
-                <div>
-                    <div class="fb-like"
-                        data-width="200"
-                        data-height="10"
-                        data-colorscheme="light"
-                        data-layout="button" 
-                        data-action="like"
-                        data-show-faces="false"
-                        data-send="true"
-                        data-bind="likeButton: newsUrl ">
-                    </div>
-                    @if (ViewBag.IsAuthenticated)
-                    {
-                        <a href="#" class="ItemDelete">delete</a>
-                        <a href="#" class="ItemEdit">edit</a>   
-                    }
+                <div class="fb-like"
+                    data-layout="standard"
+                    data-action="like"
+                    data-show-faces="true"
+                    data-bind="likeButton: newsUrl ">
                 </div>
+                @if (ViewBag.IsAuthenticated)
+                {
+                    <a href="#" class="ItemDelete">delete</a>
+                    <a href="#" class="ItemEdit">edit</a>   
+                }
             </li>
         </ul>
     </div>
-
 </div>
+
 @if (ViewBag.IsAuthenticated)
 {
-    <input type ="button" id="addNews" value="Ajouter" onClick="javascript: addNews()"  />
+    <input type="button" id="addNews" value="Ajouter" onclick="javascript: addNews()" />
 }
