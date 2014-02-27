@@ -312,6 +312,7 @@
     <Content Include="Images\del.gif" />
     <Content Include="Images\edit.gif" />
     <Content Include="Images\locked.jpg" />
+    <Content Include="Images\logo.jpg" />
     <Content Include="Images\rallycap.png" />
     <Content Include="Images\Responsables\erictalbot.jpg" />
     <Content Include="Images\Responsables\none.png" />
