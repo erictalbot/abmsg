@@ -309,6 +309,7 @@
     <Content Include="Images\Commanditaire\Canac.gif" />
     <Content Include="Images\Commanditaire\DesjardinsLogo.jpg" />
     <Content Include="Images\Commanditaire\pomerleau.jpg" />
+    <Content Include="Images\Commanditaire\Sigma.png" />
     <Content Include="Images\del.gif" />
     <Content Include="Images\edit.gif" />
     <Content Include="Images\locked.jpg" />
@@ -316,6 +317,7 @@
     <Content Include="Images\rallycap.png" />
     <Content Include="Images\Responsables\erictalbot.jpg" />
     <Content Include="Images\Responsables\none.png" />
+    <Content Include="Images\Responsables\PascalGauthier.jpg" />
     <Content Include="Images\st-georges.jpg" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <None Include="Scripts\jquery-1.8.3.intellisense.js" />
