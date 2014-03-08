@@ -301,9 +301,10 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Properties\PublishProfiles\abmsg - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\abmsg - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\abmsg - Web Deploy AZURE.pubxml" />
     <None Include="Properties\PublishProfiles\CanamIntranet - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\CanamIntranet - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\WebDeploy Prod.pubxml" />
     <None Include="Properties\PublishProfiles\zip.pubxml" />
     <Content Include="Images\ajax-loader.gif" />
     <Content Include="Images\Commanditaire\Canac.gif" />
@@ -384,6 +385,9 @@
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>
     </None>
+    <None Include="Web.Prod.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -407,6 +411,15 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'azure|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prod|AnyCPU'">
     <OutputPath>bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
