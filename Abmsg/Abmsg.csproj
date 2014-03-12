@@ -368,19 +368,19 @@
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\Responsables.cshtml" />
-    <Content Include="Views\Home\RallyCap.cshtml" />
+    <Content Include="Views\Home\Initiation.cshtml" />
     <Content Include="Views\Home\NewsAdd.cshtml" />
     <Content Include="Views\Shared\_LayoutNews.cshtml" />
     <Content Include="Views\Home\GetNews.cshtml" />
     <Content Include="Views\Home\NewsEdit.cshtml" />
     <Content Include="Views\Home\Liens.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
     <None Include="Web.azure.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>

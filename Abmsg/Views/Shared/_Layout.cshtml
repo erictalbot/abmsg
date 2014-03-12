@@ -14,12 +14,12 @@
     @RenderSection("facebookMetaTags", required: false)
 </head>
 <body>
-   @RenderSection("facebookScripts", required: false)
+    @RenderSection("facebookScripts", required: false)
     <header>
         <div class="content-wrapper">
             <div class="float-left">
                 <p class="site-title">
-                    <img src="~/Images/logo.jpg"  width="125" height="75"/><br />
+                    <img src="~/Images/logo.jpg" width="125" height="75" /><br />
                 </p>
             </div>
             <div class="float-right">
@@ -28,7 +28,8 @@
                         <li>@Html.ActionLink("Nouvelles", "Index", "Home")</li>
                         <li>@Html.ActionLink("Responsables", "Responsables", "Home")</li>
                         <li>Équipes</li>
-                        <li>@Html.ActionLink("Rally cap", "rallycap", "Home")</li>
+                        <li>@Html.ActionLink("Initiation", "initiation", "Home")</li>
+                        <li>@Html.ActionLink("Contactez-nous", "contact", "Home")</li>
                         <li>@Html.ActionLink("Liens", "liens", "Home")</li>
                         @if (ViewBag.IsAuthenticated != null)
                         {
@@ -56,7 +57,7 @@
         <div class="ws_images">
             <ul>
                 <li>
-                    <img src="/data1/images/baseball_glove.jpg" alt="Association du Baseball Mineur de St-Georges" title="Association du Baseball Mineur de St-Georges" id="wows1_0" />Nous offrons aux jeunes une occasion de...</li>
+                    <img src="/data1/images/baseball_glove.jpg" alt="Ass. Baseball Mineur de St-Georges" title="Ass. Baseball Mineur de St-Georges" id="wows1_0" />Nous offrons aux jeunes une occasion de...</li>
                 <li>
                     <img src="/data1/images/1.jpg" alt="" title="" id="wows1_1" />développer leurs talents,</li>
                 <li>
@@ -67,8 +68,8 @@
         </div>
         <div class="ws_bullets">
             <div>
-                <a href="#" title="Association du Baseball Mineur de St-Georges">
-                    <img src="/data1/tooltips/baseball_glove.jpg" alt="Association du Baseball Mineur de St-Georges" />1</a>
+                <a href="#" title="Ass. Baseball Mineur de St-Georges">
+                    <img src="/data1/tooltips/baseball_glove.jpg" alt="Ass. Baseball Mineur de St-Georges" />1</a>
                 <a href="#" title="">
                     <img src="/data1/tooltips/1.jpg" alt="" />2</a>
                 <a href="#" title="">
@@ -92,14 +93,14 @@
                         <a href="http://www.desjardins.com/fr/votre_caisse/accueil.jsp?transit=81520157" id="commandite">
                             <img src="~/Images/Commanditaire/DesjardinsLogo.jpg" />
                         </a>
-                        
+
                         <br />
                         <br />
                         <br />
                         <br />
                         <br />
                         <br />
-       
+
                         <ul class="blocks">
                             <li>
                                 <span>Affichez-vous ici !</span>
@@ -107,9 +108,9 @@
                             </li>
                         </ul>
                         <br />
-                                        <a href="http://www.eqsigma.ca/index.htm" id="commanditeSigma">
-                         <img src="~/Images/Commanditaire/Sigma.png" />
-                           </a>
+                        <a href="http://www.eqsigma.ca/index.htm" id="commanditeSigma">
+                            <img src="~/Images/Commanditaire/Sigma.png" />
+                        </a>
                     </td>
                     <td>
                         @RenderBody()

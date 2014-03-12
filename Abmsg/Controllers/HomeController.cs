@@ -33,7 +33,12 @@ namespace Abmsg.Controllers
             return View();
         }
 
-        public ActionResult RallyCap()
+        public ActionResult Initiation()
+        {
+            return View();
+        }
+
+        public ActionResult Contact()
         {
             return View();
         }
