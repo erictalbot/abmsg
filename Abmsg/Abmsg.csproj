@@ -307,6 +307,7 @@
     <None Include="Properties\PublishProfiles\WebDeploy Prod.pubxml" />
     <None Include="Properties\PublishProfiles\zip.pubxml" />
     <Content Include="Images\ajax-loader.gif" />
+    <Content Include="Images\background.png" />
     <Content Include="Images\Commanditaire\Canac.gif" />
     <Content Include="Images\Commanditaire\DesjardinsLogo.jpg" />
     <Content Include="Images\Commanditaire\pomerleau.jpg" />
