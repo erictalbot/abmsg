@@ -13,7 +13,8 @@
     @RenderSection("scripts", required: false)
     @RenderSection("facebookMetaTags", required: false)
 </head>
-<body style="background-image:url(/images/background.png);background-position:right;background-repeat:no-repeat">
+@*<body style="background-image:url(/images/background.png);background-position:right;background-repeat:no-repeat">*@
+<body>
     @RenderSection("facebookScripts", required: false)
     <header>
         <div class="content-wrapper">
@@ -89,7 +90,7 @@
         <section class="content-wrapper main-content clear-fix">
             <table border="0">
                 <tr>
-                    <td>
+                    @*<td>
                         <a href="http://www.desjardins.com/fr/votre_caisse/accueil.jsp?transit=81520157" id="commandite">
                             <img src="~/Images/Commanditaire/DesjardinsLogo.jpg" />
                         </a>
@@ -111,7 +112,7 @@
                         <a href="http://www.eqsigma.ca/index.htm" id="commanditeSigma">
                             <img src="~/Images/Commanditaire/Sigma.png" />
                         </a>
-                    </td>
+                    </td>*@
                     <td>
                         @RenderBody()
                     </td>

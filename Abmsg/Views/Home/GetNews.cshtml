@@ -3,9 +3,10 @@
     @section  facebookMetaTags
     {
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="@Model.Title" />
-        <meta property="og:image" content="http://abmsg.azurewebsites.net/images/st-georges.jpg" />
-        <meta property="og:url" content="http://abmsg.azurewebsites.net/home/getnews/"@Model.Id />
+        <meta property="og:title" content=@Model.Title />
+        <meta property="og:image" content="http://www.abmsg.ca/images/logo_small.jpg" />
+        <meta property="og:url" content="http://www.abmsg.ca/home/getnews/"@Model.Id />
+        <meta property="og:description" content=@Model.Text />
     }
     <div id="list2">
         <ul>
