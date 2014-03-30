@@ -43,9 +43,9 @@
     });
 
 
-    $(function () {
-        getNews();
-    });
+    //$(function () {
+    //    getNews();
+    //});
 
     $(document).on("click", ".ItemDelete", function () {
         var itemToRemove = ko.dataFor(this);
@@ -80,16 +80,13 @@
     };
 
 </script>
-        <div style="text-align: center">
-            <img src="~/Images/ABMSG%202014%20Inscriptions%20finale.jpg" />
-        </div>
 <div class="float-center">
     <div id="list2">
         <ul data-bind="foreach: news">
             <li>
                 <p>
                     <em><span data-bind="text: Title"></span></em>
-                    <span data-bind="text: Text"></span>
+                    <span data-bind="html: Text"></span>
                 </p>
                 <div class="fb-like"
                     data-layout="standard"

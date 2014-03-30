@@ -50,7 +50,7 @@ namespace Abmsg.Logic
             _uow.News.Add(new AbmsgModel.Data.News(_aNews.Title, _aNews.Content));
             _uow.Commit();
             _accessToken = GetAccessToken();
-            PostToFacebook();
+            //PostToFacebook();
         }
 
         private bool EditNews()

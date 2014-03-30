@@ -306,12 +306,13 @@
     <None Include="Properties\PublishProfiles\CanamIntranet - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\WebDeploy Prod.pubxml" />
     <None Include="Properties\PublishProfiles\zip.pubxml" />
-    <None Include="Images\ABMSG 2014 Inscriptions finale.jpg.old" />
-    <Content Include="Images\ABMSG 2014 Inscriptions finale.jpg" />
+    <Content Include="Images\ABMSG_2014_Inscriptions_finale.jpg" />
     <Content Include="Images\ajax-loader.gif" />
     <Content Include="Images\background.png" />
     <Content Include="Images\Commanditaire\Canac.gif" />
     <Content Include="Images\Commanditaire\DesjardinsLogo.jpg" />
+    <Content Include="Images\Commanditaire\matiss-logo.png" />
+    <Content Include="Images\Commanditaire\Maxi.jpg" />
     <Content Include="Images\Commanditaire\pomerleau.jpg" />
     <Content Include="Images\Commanditaire\Sigma.png" />
     <Content Include="Images\del.gif" />
