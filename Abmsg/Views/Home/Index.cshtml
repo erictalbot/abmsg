@@ -88,12 +88,12 @@
                     <em><span data-bind="text: Title"></span></em>
                     <span data-bind="html: Text"></span>
                 </p>
-                <div class="fb-like"
+          @*      <div class="fb-like"
                     data-layout="standard"
                     data-action="like"
                     data-show-faces="true"
                     data-bind="likeButton: newsUrl ">
-                </div>
+                </div>*@
                 @if (ViewBag.IsAuthenticated)
                 {
                     <a href="#" class="ItemDelete">delete</a>

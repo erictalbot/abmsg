@@ -26,7 +26,7 @@ namespace Abmsg.Controllers
         // GET api/news
         public IEnumerable<News> Get()
         {
-            return Uow.News.GetAll().OrderByDescending(n => n.Date).Take(4);
+            return Uow.News.GetAll().OrderByDescending(n => n.Date).Take(10);
         }
 
         public News Get(int id)
