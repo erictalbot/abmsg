@@ -8,7 +8,7 @@
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{F32A9774-9BCB-4390-A230-C236CFA413B9}</ProjectGuid>
-    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Abmsg</RootNamespace>
@@ -300,6 +300,14 @@
     <Content Include="engine1\wowslider.mod.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\AGA.PNG" />
+    <Content Include="Images\Commanditaire\bgp.png" />
+    <Content Include="Images\Horaire\Atome.pdf" />
+    <Content Include="Images\Horaire\BantamMidget.pdf" />
+    <Content Include="Images\Horaire\Moustique.pdf" />
+    <Content Include="Images\Horaire\NoviceExpo.pdf" />
+    <Content Include="Images\Horaire\Peewee.pdf" />
+    <Content Include="Images\Horaire\HoraireTournoiPeeWee.pdf" />
     <None Include="Properties\PublishProfiles\abmsg - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\abmsg - Web Deploy AZURE.pubxml" />
     <None Include="Properties\PublishProfiles\CanamIntranet - FTP.pubxml" />
@@ -309,9 +317,12 @@
     <Content Include="Images\ABMSG_2014_Inscriptions_finale.jpg" />
     <Content Include="Images\ajax-loader.gif" />
     <Content Include="Images\background.png" />
-    <Content Include="Images\Baseball 2014 ApresInscription-page1.png" />
+    <Content Include="Images\Baseball 2014 ApresInscription-page1_new.png" />
+    <Content Include="Images\Baseball 2014 ApresInscription-page2_new.PNG" />
     <Content Include="Images\Commanditaire\Canac.gif" />
+    <Content Include="Images\Commanditaire\comact.png" />
     <Content Include="Images\Commanditaire\DesjardinsLogo.jpg" />
+    <Content Include="Images\Commanditaire\logo_Canam_fr.png" />
     <Content Include="Images\Commanditaire\matiss-logo.png" />
     <Content Include="Images\Commanditaire\Maxi.jpg" />
     <Content Include="Images\Commanditaire\pomerleau.jpg" />
@@ -323,6 +334,7 @@
     <Content Include="Images\logo.jpg" />
     <Content Include="Images\logo_small.jpg" />
     <Content Include="Images\Initiation\rallycap.png" />
+    <Content Include="Images\NouveauCalendrier.PNG" />
     <Content Include="Images\Responsables\erictalbot.jpg" />
     <Content Include="Images\Responsables\none.png" />
     <Content Include="Images\Responsables\PascalGauthier.jpg" />
@@ -388,6 +400,11 @@
     <Content Include="Views\Home\NewsEdit.cshtml" />
     <Content Include="Views\Home\Liens.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Novices.cshtml" />
+    <Content Include="Views\Home\Atome.cshtml" />
+    <Content Include="Views\Home\Moustique.cshtml" />
+    <Content Include="Views\Home\PeeWee.cshtml" />
+    <Content Include="Views\Home\Bantam.cshtml" />
     <None Include="Web.azure.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>
