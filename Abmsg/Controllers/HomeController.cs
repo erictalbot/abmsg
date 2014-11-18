@@ -54,6 +54,12 @@ namespace Abmsg.Controllers
             return View();
         }
 
+        [Authorize]
+        public ActionResult FileAdd()
+        {
+            return View();
+        }
+
         [HttpGet]
         public ActionResult GetNews(int id)
         {

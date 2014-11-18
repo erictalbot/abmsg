@@ -79,6 +79,10 @@
         open('/home/newsadd/', '_self');
     };
 
+    function addFile() {
+        open('/home/FileAdd/', '_self');
+    };
+
 </script>
 <div class="float-center">
     <div id="list2">
@@ -107,4 +111,5 @@
 @if (ViewBag.IsAuthenticated)
 {
     <input type="button" id="addNews" value="Ajouter" onclick="javascript: addNews()" />
+    <input type="button" id="addNews" value="Ajouter un fichier" onclick="javascript: addFile()" />
 }
