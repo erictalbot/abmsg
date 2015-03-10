@@ -316,9 +316,12 @@
     <Content Include="Images\Commanditaire\Maxi.jpg" />
     <Content Include="Images\Commanditaire\pomerleau.jpg" />
     <Content Include="Images\Commanditaire\Sigma.png" />
+    <Content Include="Images\Commanditaire\Ultra_Medic_LG.png" />
+    <Content Include="Images\Commanditaire\VeilleuxEtFils.jpg" />
     <Content Include="Images\del.gif" />
     <Content Include="Images\edit.gif" />
     <Content Include="Images\Initiation\initiation.png" />
+    <Content Include="Images\Inscription2015.PNG" />
     <Content Include="Images\locked.jpg" />
     <Content Include="Images\logo.jpg" />
     <Content Include="Images\logo_small.jpg" />
