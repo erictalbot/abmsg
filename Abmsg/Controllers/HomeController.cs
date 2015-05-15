@@ -43,30 +43,11 @@ namespace Abmsg.Controllers
             return View();
         }
 
-        public ActionResult Novices()
+        public ActionResult Teams()
         {
             return View();
         }
 
-        public ActionResult Atome()
-        {
-            return View();
-        }
-
-        public ActionResult Moustique()
-        {
-            return View();
-        }
-
-        public ActionResult PeeWee()
-        {
-            return View();
-        }
-
-        public ActionResult Bantam()
-        {
-            return View();
-        }
 
         public ActionResult Liens()
         {

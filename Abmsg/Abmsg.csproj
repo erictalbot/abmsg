@@ -307,6 +307,7 @@
     <None Include="Properties\PublishProfiles\CanamIntranet - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\WebDeploy Prod.pubxml" />
     <None Include="Properties\PublishProfiles\Deploy.pubxml" />
+    <Content Include="Images\2015\GiantsTeams2015.PNG" />
     <Content Include="Images\ABMSG_2014_Inscriptions_finale.jpg" />
     <Content Include="Images\ajax-loader.gif" />
     <Content Include="Images\background.png" />
@@ -399,6 +400,7 @@
     <Content Include="Views\Home\Liens.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\FileAdd.cshtml" />
+    <Content Include="Views\Home\Teams.cshtml" />
     <None Include="Web.azure.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>
